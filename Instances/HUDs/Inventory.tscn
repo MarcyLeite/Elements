@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwg8molar4ok3"]
+
+[ext_resource type="Texture2D" uid="uid://c0te3q06ujuy3" path="res://Sprites/Free SciFi Inventory/ElementsInventory.png" id="1_4fr6l"]
+[ext_resource type="Script" path="res://Scripts/Player/Inventory.gd" id="1_ecfyh"]
+[ext_resource type="PackedScene" uid="uid://cfqcrejx6h3cs" path="res://Instances/HUDs/InventoryTab.tscn" id="2_md7nh"]
+[ext_resource type="PackedScene" uid="uid://b4uh5aa1nj6yc" path="res://Instances/HUDs/InventorySlot.tscn" id="2_sph2a"]
+[ext_resource type="PackedScene" uid="uid://bn0edawhxwdw4" path="res://Instances/HUDs/InventoryText.tscn" id="3_tfrqb"]
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource("1_ecfyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_4fr6l")
+centered = false
+
+[node name="Tabs" type="Node2D" parent="."]
+position = Vector2(11, 4)
+
+[node name="InventoryTab" parent="Tabs" instance=ExtResource("2_md7nh")]
+id = "weapons"
+g_name = "Weapons"
+
+[node name="InventoryTab2" parent="Tabs" instance=ExtResource("2_md7nh")]
+position = Vector2(44, 0)
+id = "resources"
+g_name = "Resources"
+
+[node name="Slots" type="Node2D" parent="."]
+position = Vector2(8, 17)
+
+[node name="InventorySlot" parent="Slots" instance=ExtResource("2_sph2a")]
+
+[node name="InventorySlot2" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(24, 0)
+
+[node name="InventorySlot3" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(48, 0)
+
+[node name="InventorySlot4" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(72, 0)
+
+[node name="InventorySlot5" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(96, 0)
+
+[node name="InventorySlot6" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(0, 24)
+
+[node name="InventorySlot7" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(24, 24)
+
+[node name="InventorySlot8" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(48, 24)
+
+[node name="InventorySlot9" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(72, 24)
+
+[node name="InventorySlot10" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(96, 24)
+
+[node name="InventorySlot11" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(0, 48)
+
+[node name="InventorySlot12" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(24, 48)
+
+[node name="InventorySlot13" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(48, 48)
+
+[node name="InventorySlot14" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(72, 48)
+
+[node name="InventorySlot15" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(96, 48)
+
+[node name="InventorySlot16" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(0, 72)
+
+[node name="InventorySlot17" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(24, 72)
+
+[node name="InventorySlot18" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(48, 72)
+
+[node name="InventorySlot19" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(72, 72)
+
+[node name="InventorySlot20" parent="Slots" instance=ExtResource("2_sph2a")]
+position = Vector2(96, 72)
+
+[node name="Description" parent="." instance=ExtResource("3_tfrqb")]
+position = Vector2(130, 17)

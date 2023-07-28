@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfqcrejx6h3cs"]
+
+[ext_resource type="Script" path="res://Scripts/Player/InventoryTab.gd" id="1_nk0fs"]
+[ext_resource type="Texture2D" uid="uid://bn5pm1ylrj6uq" path="res://Sprites/Free SciFi Inventory/ElementsTab.png" id="1_yliqc"]
+[ext_resource type="Texture2D" uid="uid://llng16jns4la" path="res://Sprites/Free SciFi Inventory/ElementsTabSelected.png" id="2_7isni"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yjehc"]
+font_size = 8
+
+[node name="InventoryTab" type="Node2D"]
+script = ExtResource("1_nk0fs")
+
+[node name="Default" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_yliqc")
+centered = false
+
+[node name="Selected" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("2_7isni")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 4.0
+offset_right = 49.0
+offset_bottom = 26.0
+size_flags_stretch_ratio = 1.05
+text = "
+"
+label_settings = SubResource("LabelSettings_yjehc")

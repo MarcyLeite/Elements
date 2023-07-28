@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfkhacwlpfwp0"]
+
+[ext_resource type="Script" path="res://Scripts/Item/Weapon.gd" id="1_fu66q"]
+
+[node name="WoodenSword" type="Node"]
+script = ExtResource("1_fu66q")
+id = "wooden_sword"
+g_name = "Wooden Sword"
+description = "Everyone's first weapon"

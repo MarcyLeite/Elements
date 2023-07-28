@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn0edawhxwdw4"]
+
+[ext_resource type="Texture2D" uid="uid://d2byyfiiq8oo8" path="res://Sprites/Free SciFi Inventory/InventoryText.png" id="1_3n8jc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qqbiq"]
+line_spacing = 0.0
+font_size = 7
+
+[node name="InventoryText" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3n8jc")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 71.0
+offset_bottom = 93.0
+label_settings = SubResource("LabelSettings_qqbiq")
+autowrap_mode = 2

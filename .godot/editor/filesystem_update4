@@ -1,0 +1,4 @@
+res://Instances/Attacks/Player.tscn
+res://Scripts/StateMachine/StateMachine.gd
+res://Scripts/StateMachine/Idle.gd
+res://Scripts/Player/Player.gd
