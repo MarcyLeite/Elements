@@ -6,6 +6,7 @@ class_name Inventory
 @onready var description_node = $Description
 
 var _items_dict: Dictionary = {}
+var equipped_weapon: Weapon = null
 
 const LINE_COUNT = 4
 const COLUMN_COUNT = 5
@@ -44,8 +45,10 @@ func _populate():
 	for slot in slot_list:
 		var item: Item = null
 		if i < len(item_list): item = item_list[i]
-		
 		slot.update_item(item)
+		
+		if item and item == equipped_weapon: slot.toggle_equip_item(true)
+		else: slot.toggle_equip_item(false)
 		i += 1
 
 func _on_item_select(slot: InventorySlot):
@@ -77,13 +80,16 @@ func _process(_delta):
 	elif Input.is_action_just_pressed('down'):
 		_selected_item_index += 5
 	
-	if Input.is_action_just_pressed('inventory_tab_prev'):
+	elif Input.is_action_just_pressed('inventory_tab_prev'):
 		_selected_tab_index -= 1
-	if Input.is_action_just_pressed('inventory_tab_next'):
+	elif Input.is_action_just_pressed('inventory_tab_next'):
 		_selected_tab_index += 1
 	
-	if Input.is_action_just_pressed('toggle_inventory'):
+	elif Input.is_action_just_pressed('toggle_inventory'):
 		toggle(false)
+	
+	elif Input.is_action_just_pressed('inventory_equip'):
+		equip()
 
 func toggle(value):
 	_just_toggle = true
@@ -101,3 +107,12 @@ func add_item(item: Item, _addons = {}):
 		_items_dict.weapons.append(item)
 	else:
 		_items_dict.resources.append(item)
+
+func equip():
+	var item: Item = slot_list[_selected_item_index].item
+
+	if item is Weapon:
+		equipped_weapon = item
+	else:
+		return
+	_populate()

@@ -7,3 +7,5 @@ script = ExtResource("1_fu66q")
 id = "wooden_sword"
 g_name = "Wooden Sword"
 description = "Everyone's first weapon"
+
+[node name="LightAttacks" type="Node" parent="."]

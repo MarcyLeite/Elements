@@ -12,4 +12,4 @@ func _init():
 	id_list.append(id)
 
 func _ready():
-	$Label.text = g_name
+	item_icon.text = g_name

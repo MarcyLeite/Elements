@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4uh5aa1nj6yc"]
+[gd_scene load_steps=6 format=3 uid="uid://b4uh5aa1nj6yc"]
 
 [ext_resource type="Script" path="res://Scripts/Player/InventorySlot.gd" id="1_466vl"]
 [ext_resource type="Texture2D" uid="uid://by1egiv05et6w" path="res://Sprites/Free SciFi Inventory/Inventory Boxes/scifi_inventory01_box.png" id="1_tg2j8"]
@@ -6,6 +6,10 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_8c7te"]
 font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmlct"]
+font_size = 7
+font_color = Color(0.576471, 1, 0.529412, 1)
 
 [node name="InventorySlot" type="Node2D"]
 script = ExtResource("1_466vl")
@@ -21,7 +25,7 @@ texture_filter = 1
 texture = ExtResource("2_tonvs")
 centered = false
 
-[node name="Label" type="Label" parent="."]
+[node name="ItemIcon" type="Label" parent="."]
 texture_filter = 1
 offset_left = 3.0
 offset_top = 1.0
@@ -30,3 +34,12 @@ offset_bottom = 27.0
 text = "
 "
 label_settings = SubResource("LabelSettings_8c7te")
+
+[node name="EquipIcon" type="Label" parent="."]
+texture_filter = 1
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 43.0
+offset_bottom = 24.0
+text = "E"
+label_settings = SubResource("LabelSettings_cmlct")

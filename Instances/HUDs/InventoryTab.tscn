@@ -21,7 +21,7 @@ texture_filter = 1
 texture = ExtResource("2_7isni")
 centered = false
 
-[node name="Label" type="Label" parent="."]
+[node name="ItemIcon" type="Label" parent="."]
 texture_filter = 1
 offset_left = 4.0
 offset_right = 49.0
